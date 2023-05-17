@@ -1,0 +1,130 @@
+use clinic;
+
+#PHARMACY
+
+INSERT INTO Pharmacy VALUES ('PH00011', 'Walgreens', '972-131-2452', '567 Pine St', 'Dallas', 'TX', '75201');
+INSERT INTO Pharmacy VALUES ('PH00025', 'CVS', '972-248-3367', '789 Oak St', 'Dallas', 'TX', '75202');
+INSERT INTO Pharmacy VALUES ('PH00032', 'Walgreens', '972-426-5462', '123 Elm St', 'Dallas', 'TX', '75203');
+INSERT INTO Pharmacy VALUES ('PH00047', 'Walmart', '972-634-7344', '456 Maple St', 'Dallas', 'TX', '75204');
+INSERT INTO Pharmacy VALUES ('PH00053', 'CVS', '972-887-9284', '789 Pine St', 'Dallas', 'TX', '75205');
+INSERT INTO Pharmacy VALUES ('PH00068', 'Walgreens', '972-263-1134', '234 Oak St', 'Dallas', 'TX', '75206');
+INSERT INTO Pharmacy VALUES ('PH00071', 'CVS', '972-467-3930', '567 Elm St', 'Dallas', 'TX', '75207');
+INSERT INTO Pharmacy VALUES ('PH00086', 'Walmart', '972-111-2222', '890 Maple St', 'Dallas', 'TX', '75208');
+INSERT INTO Pharmacy VALUES ('PH00092', 'Walgreens', '972-333-4444', '123 Pine St', 'Dallas', 'TX', '75209');
+INSERT INTO Pharmacy VALUES ('PH00107', 'CVS', '972-574-9103', '456 Oak St', 'Dallas', 'TX', '75210');
+INSERT INTO Pharmacy VALUES ('PH00113', 'Walgreens', '972-904-7923', '789 Elm St', 'Dallas', 'TX', '75211');
+INSERT INTO Pharmacy VALUES ('PH00128', 'Walmart', '972-038-8193', '234 Pine St', 'Dallas', 'TX', '75212');
+INSERT INTO Pharmacy VALUES ('PH00135', 'CVS', '972-873-2938', '567 Oak St', 'Dallas', 'TX', '75213');
+INSERT INTO Pharmacy VALUES ('PH00453', 'CVS', '972-145-8342', '786 Jackson St', 'Dallas', 'TX', '75232');
+INSERT INTO Pharmacy VALUES ('PH00065', 'CVS', '972-765-2311', '567 Watters St', 'Dallas', 'TX', '75202');
+
+select * from pharmacy;
+
+#PRESCRIPTION
+
+INSERT INTO Prescription VALUES ('TT10784', 'Tylenol', '10mg', '2022-01-15', 'PH00011');
+INSERT INTO Prescription VALUES ('TT27220', 'Advil', '20mg', '2022-02-01', 'PH00025');
+INSERT INTO Prescription VALUES ('TT72028', 'Adderall', '30mg', '2022-03-05', 'PH00032');
+INSERT INTO Prescription VALUES ('TT58346', 'Robaxin', '40mg', '2022-04-10', 'PH00047');
+INSERT INTO Prescription VALUES ('TT98319', 'Vitamin D', '50mg', '2022-05-15', 'PH00053');
+INSERT INTO Prescription VALUES ('TT28372', 'Norvasc', '60mg', '2022-06-20', 'PH00068');
+INSERT INTO Prescription VALUES ('TT72542', 'Medrol', '70mg', '2022-07-25', 'PH00071');
+INSERT INTO Prescription VALUES ('TT12038', 'Benadryl', '80mg', '2022-08-30', 'PH00086');
+INSERT INTO Prescription VALUES ('TT30273', 'Vitamin C', '90mg', '2022-09-05', 'PH00092');
+INSERT INTO Prescription VALUES ('TT75042', 'Advil', '100mg', '2022-10-10', 'PH00107');
+INSERT INTO Prescription VALUES ('TT65249', 'Acetaminophen', '110mg', '2022-11-15', 'PH00113');
+INSERT INTO Prescription VALUES ('TT38754', 'Vitamin D', '120mg', '2022-12-20', 'PH00128');
+
+select * from prescription;
+
+#REFERRAL
+
+INSERT INTO Referral VALUES ('TT72028', 'William', 'Wilson', 'W', '567-890-1234');
+INSERT INTO Referral VALUES ('TT58346' ,'George', 'Washington', 'W', '901-234-5678');
+INSERT INTO Referral VALUES ('TT98319' ,'Rob', 'Stark', 'W', '555-439-2222');
+INSERT INTO Referral VALUES ('TT28372','Mary','Lou', 'D', '456-789-0123');
+INSERT INTO Referral VALUES ('TT34764', 'Lion','King', 'K', '345-678-9012');
+INSERT INTO Referral VALUES ('TT72542', 'Linda', 'John', 'B', '678-901-2345');
+INSERT INTO Referral VALUES ('TT56823', 'Pablo','Washington', 'W', '901-234-5678');
+INSERT INTO Referral VALUES ('TT67949', 'Ima', 'Done', 'D', '123-456-7890');
+INSERT INTO Referral VALUES ('TT32047', 'Ice', 'Cool', 'J', '345-678-9012');
+INSERT INTO Referral VALUES ('TT16284', 'Ella', 'Hernandez', 'O', '555-329-4287');
+INSERT INTO Referral VALUES ('TT27220', 'Portia', 'Rossi', 'Q', '555-327-8239');
+INSERT INTO Referral VALUES ('TT30273', 'Sue', 'Dickinson', 'U', '555-653-1111');
+INSERT INTO Referral VALUES ('TTS0105','Wilson', 'Woodrow', 'W', '567-890-1234');
+INSERT INTO Referral VALUES ('TT12038','John','Khan', 'Y', '123-456-7890');
+INSERT INTO Referral VALUES ('TT62068', 'Martha', 'Owens', 'M', '555-223-9864');
+INSERT INTO Referral VALUES ('TT75042', 'Miles', 'Coral', 'N', '555-328-2389');
+INSERT INTO Referral VALUES ('TT65249', 'Benjamin', 'Swift', 'E', '555-555-8888');
+INSERT INTO Referral VALUES ('TT56923','Taylor', 'Swift', 'T', '789-012-3456');
+INSERT INTO Referral VALUES ('TT38754','Proper', 'Garcia', 'L', '555-653-1111');
+INSERT INTO Referral VALUES ('TT20383', 'Emma', 'Roberts','J', '555-929-3263');
+INSERT INTO Referral VALUES ('TT72042', 'Will', 'Pill', 'R', '555-555-7777');
+INSERT INTO Referral VALUES ('TT10784', 'Michael', 'Mancita', 'T', '555-543-9999');
+INSERT INTO Referral VALUES ('TT56028', 'Emma', 'Myers','J', '555-929-3263');
+INSERT INTO Referral VALUES ('TT61978','Courtney','Green', 'A', '012-345-6789');
+INSERT INTO Referral VALUES ('TT72046','John', 'Dope', 'D', '123-456-7890');
+INSERT INTO Referral VALUES ('TT81035','Moon','Shines','H', '234-567-8901');
+INSERT INTO Referral VALUES ('TT90244', 'Serena', 'Potato', 'S', '555-123-8888');
+INSERT INTO Referral VALUES ('TT13943','Gorgeous', 'Plato', 'V','555-439-2222');
+INSERT INTO Referral VALUES ('TT28422', 'Ronnie', 'Millie', 'P', '345-678-9012');
+INSERT INTO Referral VALUES ('TT72041', 'Linda','John', 'B', '678-901-2345');
+
+select * from referral;
+
+#STAFF
+
+INSERT INTO Doctor VALUES ('45784-SJ', 'John', 'D', 'Smith', 'j.smith@gmail.com', '555-123-4567', '1980-01-01');
+INSERT INTO Doctor VALUES ('91378-JS', 'Sarah', 'M', 'Johnson', 's.johnson@gmail.com', '555-234-5678', '1975-05-12');
+INSERT INTO Doctor VALUES ('12983-GD', 'David', 'P', 'Garcia', 'd.garcia@gmail.com', '555-345-6789', '1985-08-18');
+INSERT INTO Doctor VALUES ('32988-LJ', 'Jenny', 'S', 'Lee', 'j.lee@gmail.com', '555-456-7890', '1978-03-22');
+INSERT INTO Doctor VALUES ('18292-WJ', 'James', 'Y', 'Wang', 'j.wang@gmail.com', '555-567-8901', '1982-11-15');
+INSERT INTO Doctor VALUES ('01928-CS', 'Sophia', 'L', 'Chen', 's.chen@gmail.com', '555-678-9012', '1976-07-02');
+INSERT INTO Receptionist VALUES (100,'Philip', 'A', 'Smith', '1970-12-01', 'bobsmith@gmail.com', '910-839-7843', '55000');
+INSERT INTO Receptionist VALUES (101, 'Emily', 'K', 'Kim', '1995-02-28', 'emilykim@gmail.com', '972-943-7839', '55000');
+INSERT INTO Receptionist VALUES (102, 'Karen', 'M', 'Miller', '1988-07-08', 'karenmiller@gmail.com', '972-736-8123', '75000');
+INSERT INTO Nurse VALUES (200, 'Samantha', 'E', 'Jones', '1990-06-15', 'samanthajones@gmail.com', '783-910-8374', '65000');
+INSERT INTO Nurse VALUES (201, 'Michael', 'J', 'Johnson', '1983-09-20', 'michaeljohnson@gmail.com', '972-910-2839', '70000');
+INSERT INTO Nurse VALUES (202, 'David', 'S', 'Smith', '1975-11-12', 'davidsmith@gmail.com', '972-516-3526', '60000');
+INSERT INTO Nurse VALUES (203, 'Jordan', 'A', 'Lee', '1985-12-02', 'jordanlee@gmail.com', '972-827-9272', '70000');
+INSERT INTO Nurse VALUES (204, 'Ann', 'R', 'Marie', '1989-04-12', 'annmarie@gmail.com', '210-987-8293', '65000');
+
+
+select * from doctor;
+select * from receptionist;
+select * from nurse;
+
+#TREATMENT
+
+INSERT INTO Treatment VALUES ('TT72028', 'Annual physical exam', 'BB097');
+INSERT INTO Treatment VALUES ('TT58346','Follow-up appointment for blood work', 'CA631');
+INSERT INTO Treatment VALUES ('TT98319','Consultation for knee pain','DE275');
+INSERT INTO Treatment VALUES ('TT28372','Dental cleaning','EF698');
+INSERT INTO Treatment VALUES ('TT34764', 'Eye exam','FG132');
+INSERT INTO Treatment VALUES ('TT72542', 'Annual check-up', 'GH657');
+INSERT INTO Treatment VALUES ('TT56823', 'Physical therapy session','HI234');
+INSERT INTO Treatment VALUES ('TT67949', 'Flu shot', 'IJ768');
+INSERT INTO Treatment VALUES ('TT32047', 'Blood pressure check', 'JK901');
+INSERT INTO Treatment VALUES ('TT16284', 'Vaccination', 'KL543');
+INSERT INTO Treatment VALUES ('TT27220', 'Check-up for diabetes', 'MN097');
+INSERT INTO Treatment VALUES ('TT30273', 'Follow-up after surgery', 'AB654');
+INSERT INTO Treatment VALUES ('TTS0105', 'Physical exam for school', 'CD312');
+INSERT INTO Treatment VALUES ('TT12038', 'Ear infection','DE786');
+INSERT INTO Treatment VALUES ('TT62068', 'Immunization','FG431');
+INSERT INTO Treatment VALUES ('TT75042', 'Annual check-up', 'GH759');
+INSERT INTO Treatment VALUES ('TT65249', 'Flu shot','IJ123');
+INSERT INTO Treatment VALUES ('TT56923','Physical therapy', 'KL654');
+INSERT INTO Treatment VALUES ('TT38754', 'Eye exam','MN321');
+INSERT INTO Treatment VALUES ('TT20383','Consultation for allergies', 'AB567');
+INSERT INTO Treatment VALUES ('TT72042', 'Annual check-up','CD987');
+INSERT INTO Treatment VALUES ('TT10784','Vaccination','DE123');
+INSERT INTO Treatment VALUES ('TT56028','Blood pressure check','FG456');
+INSERT INTO Treatment VALUES ('TT61978', 'Follow-up after specialist', 'NQ338');
+INSERT INTO Treatment VALUES ('TT72046', 'Annual physical','GM183');
+INSERT INTO Treatment VALUES ('TT81035', 'Consultation for surgery','AS835');
+INSERT INTO Treatment VALUES ('TT90244', 'Check-up with primary care physician','FP574');
+INSERT INTO Treatment VALUES ('TT13943', 'Therapy session','JS286');
+INSERT INTO Treatment VALUES ('TT28422', 'Lab work','KP192');
+INSERT INTO Treatment VALUES ('TT72041', 'Annual physical','VJ321');
+
+select * from treatment;
