@@ -251,7 +251,6 @@ INSERT INTO Nurse VALUES (202, 'David', 'S', 'Smith', '1975-11-12', 'davidsmith@
 INSERT INTO Nurse VALUES (203, 'Jordan', 'A', 'Lee', '1985-12-02', 'jordanlee@gmail.com', '972-827-9272', '70000');
 INSERT INTO Nurse VALUES (204, 'Ann', 'R', 'Marie', '1989-04-12', 'annmarie@gmail.com', '210-987-8293', '65000');
 
-
 select * from doctor;
 select * from receptionist;
 select * from nurse;
