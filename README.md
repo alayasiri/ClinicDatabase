@@ -30,7 +30,7 @@ Schema:  <br/>
 <h2>Create and Insert:</h2>
 
 <b>Building a Database for a Clinic</b>
-- [Create Tables](https://github.com/alayasiri/ClinicDatabase/blob/main/CreateTables)
+- [Create Tables](https://github.com/alayasiri/ClinicDatabase/blob/c352ca6e6d38b99bc8dd34ec7708f6dd89f94e9d/Create%20Table)
 - [Insert Statements](https://github.com/alayasiri/ClinicDatabase/blob/main/Inserts)
 
 <p align="center">
