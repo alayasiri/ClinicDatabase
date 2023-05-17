@@ -1,5 +1,167 @@
 use clinic;
 
+#APPT
+
+INSERT INTO Appointment VALUES ('BB097', '2023-02-22', 'Annual physical exam', 1430, 'R01', '45784-SJ', 00005, 100, 200);
+INSERT INTO Appointment VALUES ('CA631', '2023-03-15', 'Follow-up appointment for blood work', 1000, 'R02', '32988-LJ', 00009, 101, 201);
+INSERT INTO Appointment VALUES ('DE275', '2023-04-01', 'Consultation for knee pain', 1130, 'R03', '12983-GD', 00028, 102, 202);
+INSERT INTO Appointment VALUES ('EF698', '2023-05-10', 'Dental cleaning', 1530, 'R02', '01928-CS', 00004, 100, 203);
+INSERT INTO Appointment VALUES ('FG132', '2023-06-21', 'Eye exam', 0900, 'R03', '01928-CS', 00013, 101, 204);
+INSERT INTO Appointment VALUES ('GH657', '2023-07-14', 'Annual check-up', 1100, 'R01', '32988-LJ', 00006, 102, 202);
+INSERT INTO Appointment VALUES ('HI234', '2023-08-02', 'Physical therapy session', 1400, 'R01', '91378-JS', 00009, 100, 200);
+INSERT INTO Appointment VALUES ('IJ768', '2023-09-08', 'Flu shot', 1015, 'R03', '32988-LJ', 00001, 101, 201);
+INSERT INTO Appointment VALUES ('JK901', '2023-10-19', 'Blood pressure check', 0945, 'R02', '12983-GD', 00003, 102, 202);
+INSERT INTO Appointment VALUES ('KL543', '2023-11-12', 'Vaccination', 1600, 'R02', '45784-SJ', 00021, 100, 203);
+INSERT INTO Appointment VALUES ('MN097', '2023-12-15', 'Check-up for diabetes', 0900, 'R01', '01928-CS', 00023, 101, 204);
+INSERT INTO Appointment VALUES ('AB654', '2024-01-18', 'Follow-up after surgery', 1030, 'R02', '01928-CS', 00027, 102, 202);
+INSERT INTO Appointment VALUES ('CD312', '2024-02-19', 'Physical exam for school', 1400, 'R03', '91378-JS', 00005, 100, 200);
+INSERT INTO Appointment VALUES ('DE786', '2024-03-10', 'Ear infection', 0930, 'R02', '32988-LJ', 00011, 101, 201);
+INSERT INTO Appointment VALUES ('FG431', '2024-04-25', 'Immunization', 1500, 'R01', '18292-WJ', 00019, 102, 202);
+INSERT INTO Appointment VALUES ('GH759', '2024-05-08', 'Annual check-up', 1200, 'R03', '18292-WJ', 00020, 100, 203);
+INSERT INTO Appointment VALUES ('IJ123', '2024-06-11', 'Flu shot', 1115, 'R02', '32988-LJ', 00016, 101, 204);
+INSERT INTO Appointment VALUES ('KL654', '2024-07-06', 'Physical therapy', 1330, 'R02', '45784-SJ', 00007, 102, 200);
+INSERT INTO Appointment VALUES ('MN321', '2024-08-29', 'Eye exam', 0900, 'R01', '91378-JS', 00018, 100, 200);
+INSERT INTO Appointment VALUES ('AB567', '2024-09-12', 'Consultation for allergies', 0930, 'R10', '45784-SJ', 00017, 101, 201);
+INSERT INTO Appointment VALUES ('CD987', '2024-10-18', 'Annual check-up', 1100, 'R03', '01928-CS', 00024, 102, 202);
+INSERT INTO Appointment VALUES ('DE123', '2024-11-21', 'Vaccination', 1200, 'R02', '18292-WJ', 00026, 100, 203);
+INSERT INTO Appointment VALUES ('FG456', '2024-12-18', 'Blood pressure check', 0945, 'R01', '45784-SJ', 00017, 101, 204);
+INSERT INTO Appointment VALUES ('NQ338', '2023-06-20', 'Follow-up after specialist', 1400, 'R02', '01928-CS', 00010, 102, 204);
+INSERT INTO Appointment VALUES ('GM183', '2023-06-21', 'Annual physical', 0800, 'R03', '91378-JS', 00001, 100, 200);
+INSERT INTO Appointment VALUES ('AS835', '2023-06-22', 'Consultation for surgery', 1500, 'R02', '45784-SJ', 00012, 101, 201);
+INSERT INTO Appointment VALUES ('FP574', '2023-06-23', 'Check-up with primary care physician', 0930, 'R01', '45784-SJ', 00025, 102, 202);
+INSERT INTO Appointment VALUES ('JS286', '2023-06-24', 'Therapy session', 1100, 'R01', '01928-CS', 00028, 100, 203);
+INSERT INTO Appointment VALUES ('KP192', '2023-06-25', 'Lab work', 1300, 'R03', '91378-JS', 00003, 101, 204);
+INSERT INTO Appointment VALUES ('VJ321', '2023-06-26', 'Annual physical', 1000, 'R03', '32988-LJ', 00006, 102, 201);
+
+select * from appointment;
+
+#BILLING
+
+INSERT INTO Billing VALUES (1001, 'A001', 'Credit Card', 'Paid', 0.00, 00001);
+INSERT INTO Billing VALUES (1002, 'B002', 'Check', 'Unpaid', 25.00, 00002);
+INSERT INTO Billing VALUES (1003, 'C003', 'Debit Card', 'Paid', 0.00, 00003);
+INSERT INTO Billing VALUES (1004, 'D004', 'Credit Card', 'Unpaid', 50.00, 00004);
+INSERT INTO Billing VALUES (1005, 'E005', 'Check', 'Unpaid', 100.00, 00005);
+INSERT INTO Billing VALUES (1006, 'F006', 'Debit Card', 'Paid', 0.00, 00006);
+INSERT INTO Billing VALUES (1007, 'G007', 'Credit Card', 'Paid', 0.00, 00007);
+INSERT INTO Billing VALUES (1008, 'H008', 'Check', 'Unpaid', 75.00, 00008);
+INSERT INTO Billing VALUES (1009, 'I009', 'Debit Card', 'Paid', 0.00, 00009);
+INSERT INTO Billing VALUES (1010, 'J010', 'Credit Card', 'Paid', 0.00, 00010);
+INSERT INTO Billing VALUES (1011, 'K011', 'Check', 'Unpaid', 125.00, 00011);
+INSERT INTO Billing VALUES (1012, 'L012', 'Debit Card', 'Paid', 0.00, 00012);
+INSERT INTO Billing VALUES (1013, 'M013', 'Credit Card', 'Paid', 0.00, 00013);
+INSERT INTO Billing VALUES (1014, 'N014', 'Check', 'Unpaid', 100.00,00014);
+INSERT INTO Billing VALUES (1015, 'O015', 'Debit Card', 'Paid', 0.00, 00015);
+INSERT INTO Billing VALUES (1016, 'P016', 'Credit Card', 'Unpaid', 150.00, 00016);
+INSERT INTO Billing VALUES (1017, 'Q017', 'Check', 'Unpaid', 175.00, 00017);
+INSERT INTO Billing VALUES (1018, 'R018', 'Debit Card', 'Paid', 0.00, 00018);
+INSERT INTO Billing VALUES (1019, 'S019', 'Credit Card', 'Paid', 0.00, 00019);
+INSERT INTO Billing VALUES (1020, 'T020', 'Check', 'Unpaid', 200.00, 00020);
+INSERT INTO Billing VALUES (1021, 'U021', 'Debit Card', 'Paid', 0.00, 00021);
+INSERT INTO Billing VALUES (1022, 'V022', 'Credit Card', 'Unpaid', 225.00, 00022);
+INSERT INTO Billing VALUES (1023, 'W023', 'Check', 'Unpaid', 250.00, 00023);
+INSERT INTO Billing VALUES (1024, 'X024', 'Debit Card', 'Paid', 0.00, 00024);
+INSERT INTO Billing VALUES (1025, 'Y025', 'Credit Card', 'Paid', 0.00, 00025);
+
+select * from billing;
+
+#INSURANCE
+
+INSERT INTO Insurance VALUES ('A001', 'Aetna', 'PPO', 30, 'Active', 1);
+INSERT INTO Insurance VALUES ('B002', 'Blue Cross Blue Shield', 'HMO', 20, 'Active', 2);
+INSERT INTO Insurance VALUES ('C003', 'Cigna', 'POS', 40, 'Active', 3);
+INSERT INTO Insurance VALUES ('D004', 'Delta Dental', 'Dental', 10, 'Active', 4);
+INSERT INTO Insurance VALUES ('E005', 'Empire BlueCross', 'EPO', 50, 'Active', 5);
+INSERT INTO Insurance VALUES ('F006', 'First Health', 'PPO', 25, 'Active', 6);
+INSERT INTO Insurance VALUES ('G007', 'Guardian', 'Dental', 15, 'Active', 7);
+INSERT INTO Insurance VALUES ('H008', 'Humana', 'HMO', 30, 'Active', 8);
+INSERT INTO Insurance VALUES ('I009', 'Independence Blue Cross', 'POS', 35, 'Active', 9);
+INSERT INTO Insurance VALUES ('J010', 'Johns Hopkins US Family Health Plan', 'HMO', 20, 'Active', 10);
+INSERT INTO Insurance VALUES ('K011', 'Kaiser Permanente', 'EPO', 40, 'Active', 11);
+INSERT INTO Insurance VALUES ('L012', 'Liberty Mutual', 'PPO', 35, 'Active', 12);
+INSERT INTO Insurance VALUES ('M013', 'MetLife', 'Dental', 5, 'Active', 13);
+INSERT INTO Insurance VALUES ('N014', 'Nationwide', 'HMO', 25, 'Active', 14);
+INSERT INTO Insurance VALUES ('O015', 'Oscar', 'EPO', 45, 'Active', 15);
+INSERT INTO Insurance VALUES ('P016', 'Progressive', 'PPO', 20, 'Active', 16);
+INSERT INTO Insurance VALUES ('Q017', 'QualChoice', 'HMO', 15, 'Active', 17);
+INSERT INTO Insurance VALUES ('R018', 'Regence BlueCross BlueShield', 'POS', 30, 'Active', 18);
+INSERT INTO Insurance VALUES ('S019', 'State Farm', 'PPO', 25, 'Active', 19);
+INSERT INTO Insurance VALUES ('T020', 'Travelers', 'HMO', 35, 'Active', 20);
+INSERT INTO Insurance VALUES ('U021', 'UnitedHealthcare', 'EPO', 50, 'Active', 21);
+INSERT INTO Insurance VALUES ('V022', 'Vision Service Plan', 'Dental', 10, 'Active', 22);
+INSERT INTO Insurance VALUES ('W023', 'WellCare', 'HMO', 30, 'Active', 23);
+INSERT INTO Insurance VALUES ('X024', 'Xcel Energy', 'PPO', 30, 'Active', 24);
+INSERT INTO Insurance VALUES ('Y025', 'Yale Health', 'POS', 40, 'Active', 25);
+
+select * from insurance;
+
+#LAB
+
+INSERT INTO LabCode VALUES ('LC00001', 'Blood Test');
+INSERT INTO LabCode VALUES ('LC00002', 'Urine Test');
+INSERT INTO LabCode VALUES ('LC00003', 'CT Scan');
+INSERT INTO LabCode VALUES ('LC00004', 'MRI Scan');
+INSERT INTO LabCode VALUES ('LC00005', 'X-ray');
+INSERT INTO LabCode VALUES ('LC00006', 'Ultrasound');
+INSERT INTO LabCode VALUES ('LC00007', 'ECG');
+INSERT INTO LabCode VALUES ('LC00008', 'Echocardiogram');
+INSERT INTO LabCode VALUES ('LC00009', 'Pap Smear');
+INSERT INTO LabCode VALUES ('LC00010', 'Colonoscopy');
+
+INSERT INTO LabImaging VALUES ('TT28372', '2023-03-20', 'CT scan for Robert Johnson', 'LC00003');
+INSERT INTO LabImaging VALUES ('TTS0105', '2023-04-23', 'Ultrasound for Jessica Garcia', 'LC00006');
+INSERT INTO LabImaging VALUES ('TT65249', '2023-05-10', 'MRI scan for Michael Kim', 'LC00004');
+INSERT INTO LabImaging VALUES ('TT62068', '2023-07-20', 'CT scan for William Davis', 'LC00003');
+INSERT INTO LabImaging VALUES ('TT75042', '2023-08-25', 'Ultrasound for Mary Wilson', 'LC00006');
+INSERT INTO LabImaging VALUES ('TT38754', '2023-09-03', 'MRI scan for Daniel Anderson', 'LC00004');
+
+select * from labcode;
+select * from LabImaging;
+
+#OFFICE
+
+INSERT INTO Office VALUES ('01928-CS', 1);
+INSERT INTO Office VALUES ('12983-GD', 2);
+INSERT INTO Office VALUES ('18292-WJ', 3);
+INSERT INTO Office VALUES ('32988-LJ', 4);
+INSERT INTO Office VALUES ('45784-SJ', 5);
+INSERT INTO Office VALUES ('91378-JS', 6);
+
+select * from office;
+
+#PATIENT
+
+INSERT INTO Patient VALUES (00001, 'Male', 'Dough', 'John', 'D', 'johndough@gmail.com', '123-456-7890', '1980-01-01', '345 Main St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00002, 'Female', 'Smith', 'Granny', 'S', 'grannysmith@gmail.com', '234-567-8901', '1990-02-02', '678 1st Ave', 'Dallas', 'TX', 75202);
+INSERT INTO Patient VALUES (00003, 'Male', 'Robert', 'Ronnie', 'J', 'robertronnie@gmail.com', '345-678-9012', '1970-03-03', '889 Elm St', 'Dallas', 'TX', 75022);
+INSERT INTO Patient VALUES (00004, 'Female', 'Davis', 'Mary', 'D', 'marydavis@gmail.com', '456-789-0123', '1985-04-04', '998 2nd St', 'Dallas', 'TX', 75218);
+INSERT INTO Patient VALUES (00005, 'Male', 'William', 'Wilson', 'W', 'williamwilson@gmail.com', '567-890-1234', '1995-05-05', '644 3rd Ave', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00006, 'Female', 'Brown', 'Linda', 'B', 'lindabrown@gmail.com', '678-901-2345', '1981-06-06', '4th St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00007, 'Male', 'David', 'Taylor', 'T', 'taylordiddle@gmail.com', '789-012-3456', '1975-07-07', '5th Ave', 'Dallas', 'TX', 75255);
+INSERT INTO Patient VALUES (00008, 'Female', 'Goat', 'Amanda', 'C', 'amandagoat@gmail.com', '8901234567', '1992-08-08', '6th St', 'Dallas', 'TX', 75208);
+INSERT INTO Patient VALUES (00009, 'Male', 'Washington', 'George', 'W', 'georgewashington@gmail.com', '9012345678', '1986-09-09', '7th Ave', 'Dallas', 'TX', 75209);
+INSERT INTO Patient VALUES (00010, 'Female', 'Green', 'Rachel', 'A', 'Rachelgreenfriend@gmail.com', '0123456789', '1987-10-10', '8th St', 'Dallas', 'TX', 75210);
+INSERT INTO Patient VALUES (00011, 'Male', 'Young', 'John', 'Y', 'johnyoung@gmail.com', '1234567890', '1988-11-11', '9th Ave', 'Dallas', 'TX', 75211);
+INSERT INTO Patient VALUES (00012, 'Female', 'Curious', 'Marie', 'H', 'mariecurious@gmail.com', '2345678901', '1978-12-12', '10th St', 'Dallas', 'TX', 75213);
+INSERT INTO Patient VALUES (00013, 'Male', 'King', 'Stephen', 'K', 'stephenking@gmail.com', '3456789012', '1979-01-13', '11th Ave', 'Dallas', 'TX', 75213);
+INSERT INTO Patient VALUES (00014, 'Female', 'Widow', 'Black', 'A', 'black.widow@gmail.com', '789-012-3456', '1980-07-24', '6983 Avengers Dr', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00015, 'Male', 'Garcia', 'David', 'D', 'david.garcia@gmail.com', '789-012-3456', '1992-07-07', '1234 Oakwood Dr', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00016, 'Male', 'Button', 'Benjamin', 'E', 'bbutton@gmail.com', '555-555-8888', '1989-05-12', '321 Oak St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00017, 'Female', 'Watson', 'Emma', 'J', 'ewatson@gmail.com', '555-929-3263', '1980-12-24', '456 Maple Ave', 'Dallas', 'TX', 75203);
+INSERT INTO Patient VALUES (00018, 'Male', 'Garcia', 'Nathan', 'L', 'ngarcia@gmail.com', '555-653-1111', '1992-08-07', '789 Pine Rd', 'Dallas', 'TX', 75205);
+INSERT INTO Patient VALUES (00019, 'Female', 'Stewart', 'Martha', 'M', 'mstewart@gmail.com', '555-223-9864', '1998-04-17', '123 Cedar Blvd', 'Dallas', 'TX', 75202);
+INSERT INTO Patient VALUES (00020, 'Male', 'Morales', 'Miles', 'N', 'mmorales@gmail.com', '555-328-2389', '1975-11-21', '321 Oak St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00021, 'Female', 'Perez', 'Ella', 'O', 'eperez@gmail.com', '555-329-4287', '1987-09-30', '456 Maple Ave', 'Dallas', 'TX', 75203);
+INSERT INTO Patient VALUES (00022, 'Male', 'Jones', 'Jerry', 'P', 'Jerryjones@gmail.com', '214-424-2894', '1984-02-19', '789 Pine Rd', 'Dallas', 'TX', 75205);
+INSERT INTO Patient VALUES (00023, 'Female', 'Miller', 'Portia', 'Q', 'pmiller@gmail.com', '555-327-8239', '1991-07-04', '123 Cedar Blvd', 'Dallas', 'TX', 75202);
+INSERT INTO Patient VALUES (00024, 'Male', 'Hill', 'Will', 'R', 'whill@gmail.com', '555-555-7777', '1979-03-11', '326 Oak St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00025, 'Female', 'Williams', 'Serena', 'S', 'swilliams@gmail.com', '555-123-8888', '1995-12-02', '456 Maple Ave', 'Dallas', 'TX', 75203);
+INSERT INTO Patient VALUES (00026, 'Male', 'Scott', 'Michael', 'T', 'mscott@gmail.com', '555-543-9999', '1982-06-09', '789 Pine Rd', 'Dallas', 'TX', 75205);
+INSERT INTO Patient VALUES (00027, 'Female', 'Dickinson', 'Emily', 'U', 'edickinson@gmail.com', '555-653-1111', '1990-01-14', '123 Cedar Blvd', 'Dallas', 'TX', 75202);
+INSERT INTO Patient VALUES (00028, 'Male', 'Stark', 'Jon', 'V', 'jstark@gmail.com', '555-439-2222', '1977-04-25', '899 Cold Wall Way', 'Dallas', 'TX', 75029);
+
+select * from patient;
+
 #PHARMACY
 
 INSERT INTO Pharmacy VALUES ('PH00011', 'Walgreens', '972-131-2452', '567 Pine St', 'Dallas', 'TX', '75201');
