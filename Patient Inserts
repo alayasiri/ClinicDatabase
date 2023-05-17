@@ -1,0 +1,32 @@
+use clinic;
+
+INSERT INTO Patient VALUES (00001, 'Male', 'Dough', 'John', 'D', 'johndough@gmail.com', '123-456-7890', '1980-01-01', '345 Main St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00002, 'Female', 'Smith', 'Granny', 'S', 'grannysmith@gmail.com', '234-567-8901', '1990-02-02', '678 1st Ave', 'Dallas', 'TX', 75202);
+INSERT INTO Patient VALUES (00003, 'Male', 'Robert', 'Ronnie', 'J', 'robertronnie@gmail.com', '345-678-9012', '1970-03-03', '889 Elm St', 'Dallas', 'TX', 75022);
+INSERT INTO Patient VALUES (00004, 'Female', 'Davis', 'Mary', 'D', 'marydavis@gmail.com', '456-789-0123', '1985-04-04', '998 2nd St', 'Dallas', 'TX', 75218);
+INSERT INTO Patient VALUES (00005, 'Male', 'William', 'Wilson', 'W', 'williamwilson@gmail.com', '567-890-1234', '1995-05-05', '644 3rd Ave', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00006, 'Female', 'Brown', 'Linda', 'B', 'lindabrown@gmail.com', '678-901-2345', '1981-06-06', '4th St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00007, 'Male', 'David', 'Taylor', 'T', 'taylordiddle@gmail.com', '789-012-3456', '1975-07-07', '5th Ave', 'Dallas', 'TX', 75255);
+INSERT INTO Patient VALUES (00008, 'Female', 'Goat', 'Amanda', 'C', 'amandagoat@gmail.com', '8901234567', '1992-08-08', '6th St', 'Dallas', 'TX', 75208);
+INSERT INTO Patient VALUES (00009, 'Male', 'Washington', 'George', 'W', 'georgewashington@gmail.com', '9012345678', '1986-09-09', '7th Ave', 'Dallas', 'TX', 75209);
+INSERT INTO Patient VALUES (00010, 'Female', 'Green', 'Rachel', 'A', 'Rachelgreenfriend@gmail.com', '0123456789', '1987-10-10', '8th St', 'Dallas', 'TX', 75210);
+INSERT INTO Patient VALUES (00011, 'Male', 'Young', 'John', 'Y', 'johnyoung@gmail.com', '1234567890', '1988-11-11', '9th Ave', 'Dallas', 'TX', 75211);
+INSERT INTO Patient VALUES (00012, 'Female', 'Curious', 'Marie', 'H', 'mariecurious@gmail.com', '2345678901', '1978-12-12', '10th St', 'Dallas', 'TX', 75213);
+INSERT INTO Patient VALUES (00013, 'Male', 'King', 'Stephen', 'K', 'stephenking@gmail.com', '3456789012', '1979-01-13', '11th Ave', 'Dallas', 'TX', 75213);
+INSERT INTO Patient VALUES (00014, 'Female', 'Widow', 'Black', 'A', 'black.widow@gmail.com', '789-012-3456', '1980-07-24', '6983 Avengers Dr', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00015, 'Male', 'Garcia', 'David', 'D', 'david.garcia@gmail.com', '789-012-3456', '1992-07-07', '1234 Oakwood Dr', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00016, 'Male', 'Button', 'Benjamin', 'E', 'bbutton@gmail.com', '555-555-8888', '1989-05-12', '321 Oak St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00017, 'Female', 'Watson', 'Emma', 'J', 'ewatson@gmail.com', '555-929-3263', '1980-12-24', '456 Maple Ave', 'Dallas', 'TX', 75203);
+INSERT INTO Patient VALUES (00018, 'Male', 'Garcia', 'Nathan', 'L', 'ngarcia@gmail.com', '555-653-1111', '1992-08-07', '789 Pine Rd', 'Dallas', 'TX', 75205);
+INSERT INTO Patient VALUES (00019, 'Female', 'Stewart', 'Martha', 'M', 'mstewart@gmail.com', '555-223-9864', '1998-04-17', '123 Cedar Blvd', 'Dallas', 'TX', 75202);
+INSERT INTO Patient VALUES (00020, 'Male', 'Morales', 'Miles', 'N', 'mmorales@gmail.com', '555-328-2389', '1975-11-21', '321 Oak St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00021, 'Female', 'Perez', 'Ella', 'O', 'eperez@gmail.com', '555-329-4287', '1987-09-30', '456 Maple Ave', 'Dallas', 'TX', 75203);
+INSERT INTO Patient VALUES (00022, 'Male', 'Jones', 'Jerry', 'P', 'Jerryjones@gmail.com', '214-424-2894', '1984-02-19', '789 Pine Rd', 'Dallas', 'TX', 75205);
+INSERT INTO Patient VALUES (00023, 'Female', 'Miller', 'Portia', 'Q', 'pmiller@gmail.com', '555-327-8239', '1991-07-04', '123 Cedar Blvd', 'Dallas', 'TX', 75202);
+INSERT INTO Patient VALUES (00024, 'Male', 'Hill', 'Will', 'R', 'whill@gmail.com', '555-555-7777', '1979-03-11', '326 Oak St', 'Dallas', 'TX', 75201);
+INSERT INTO Patient VALUES (00025, 'Female', 'Williams', 'Serena', 'S', 'swilliams@gmail.com', '555-123-8888', '1995-12-02', '456 Maple Ave', 'Dallas', 'TX', 75203);
+INSERT INTO Patient VALUES (00026, 'Male', 'Scott', 'Michael', 'T', 'mscott@gmail.com', '555-543-9999', '1982-06-09', '789 Pine Rd', 'Dallas', 'TX', 75205);
+INSERT INTO Patient VALUES (00027, 'Female', 'Dickinson', 'Emily', 'U', 'edickinson@gmail.com', '555-653-1111', '1990-01-14', '123 Cedar Blvd', 'Dallas', 'TX', 75202);
+INSERT INTO Patient VALUES (00028, 'Male', 'Stark', 'Jon', 'V', 'jstark@gmail.com', '555-439-2222', '1977-04-25', '899 Cold Wall Way', 'Dallas', 'TX', 75029);
+
+select * from patient;
