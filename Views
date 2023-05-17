@@ -1,0 +1,105 @@
+use clinic;
+
+#View of all the patients who were in Room R01 for their appointment
+
+CREATE VIEW PatientsinRoomR01 AS
+SELECT 	Patient.PatientID, 
+Patient.Firstname, 
+Patient.MiddleInitial, 
+Patient.Lastname, 
+Appointment.Room
+FROM Patient
+JOIN Appointment ON Appointment.PatientID = Patient.PatientID
+WHERE room = 'R01';
+
+SELECT * 
+FROM PatientsinRoomR01;
+
+
+#Table view of all the staff and their contact information working at the clinic 
+
+CREATE VIEW ClinicStaff AS
+SELECT Doctor.DoctorID AS 'Employee ID', CONCAT(Doctor.FirstName, " ", Doctor.LastName) 
+	as 'Name', Doctor.Phone as 'Phone', Doctor.Email as 'Email'
+	FROM Doctor
+	UNION ALL
+SELECT  Nurse.NurseID AS 'Employee ID', CONCAT(Nurse.FirstName , " ", Nurse.LastName) 
+	as 'Name', Nurse.Phone as 'Phone', Nurse.Email as 'Email'
+	FROM Nurse
+	UNION ALL
+SELECT  Receptionist.ReceptionistID AS 'Employee ID', CONCAT(Receptionist.FirstName, " ", Receptionist.LastName) 
+	as 'Name', Receptionist.Phone as 'Phone', Receptionist.Email as 'Email'
+	FROM Receptionist;
+
+SELECT * 
+FROM ClinicStaff;
+
+############################################################################################################################################
+
+#OTHER TEAMMATES' QUERIES
+
+#This view returns the PatientID, First Name, Last Name, and Payment Status of the Patients who have a Payment Status of ‘Unpaid’ 
+
+CREATE VIEW UnpaidPatient AS
+SELECT Patient.PatientID, Patient.FirstName, Patient.LastName, PaymentStatus
+FROM Billing
+JOIN Patient on Billing.PatientID = Patient.PatientID
+WHERE PaymentStatus = 'Unpaid';
+
+SELECT * 
+FROM UnpaidPatient;
+
+
+#Table view with PatientID, AppointmentID, TreatmentID, ReferralID, PrescriptionID, LabImagingID 
+#for each patient (people who have had all 3)
+
+CREATE VIEW PatientTreatment AS
+SELECT  DISTINCT(Patient.PatientID), 
+        Patient.Firstname, 
+        Patient.LastName, 
+        Appointment.ApptID, 
+        Treatment.TreatmentID, 
+        Referral.Phone AS ReferralPhone, 
+        Prescription.Name AS PrescriptionName,
+        LabImaging.Description AS LabImaging
+FROM Patient
+    LEFT JOIN Appointment ON Appointment.PatientID = Patient.PatientID
+    LEFT JOIN Treatment ON Treatment.ApptID = Appointment.ApptID
+    LEFT JOIN Referral ON Referral.ReferralID = Treatment.TreatmentID
+    LEFT JOIN Prescription ON Prescription.PrescriptionID = Treatment.TreatmentID
+    LEFT JOIN LabImaging ON LabImaging.LabImageID = Treatment.TreatmentID;
+
+        
+SELECT * 
+FROM PatientTreatment;
+        
+
+#Table view for unique patients and their addresses
+
+CREATE VIEW DistinctPatients AS
+SELECT  DISTINCT(Patient.PatientID), 
+        Patient.FirstName, 
+        Patient.LastName, 
+        Patient.Street, 
+        Patient.City, 
+        Patient.State, 
+        Patient.Zip
+FROM Patient;
+
+SELECT * 
+FROM DistinctPatients;
+
+
+#Table view for all prescriptions sent to Walgreens or CVS
+
+CREATE VIEW PharmacyFilter AS
+SELECT 	Prescription.PrescriptionID, 
+Pharmacy.PharmacyID, 
+Pharmacy.Name
+FROM Prescription
+JOIN Pharmacy ON Pharmacy.PharmacyID = Prescription.PharmacyID
+WHERE Pharmacy.Name = 'Walgreens' || Pharmacy.Name = 'CVS'
+ORDER BY Pharmacy.Name;
+
+SELECT * 
+FROM PharmacyFilter;
