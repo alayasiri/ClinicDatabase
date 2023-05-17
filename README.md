@@ -42,7 +42,7 @@ Example using Patient's Table: <br/>
 <h2>Writing Queries and Views:</h2>
 
 <b>Code to All Queries and Views</b>
-- [Queries](https://github.com/alayasiri/ClinicDatabase/blob/main/Queries)
+- [Queries](https://github.com/alayasiri/ClinicDatabase/blob/main/Create%20Table)
 - [Views](https://github.com/alayasiri/ClinicDatabase/blob/main/Views)
   
 <p align="center">
