@@ -1,0 +1,22 @@
+use clinic;
+
+INSERT INTO LabCode VALUES ('LC00001', 'Blood Test');
+INSERT INTO LabCode VALUES ('LC00002', 'Urine Test');
+INSERT INTO LabCode VALUES ('LC00003', 'CT Scan');
+INSERT INTO LabCode VALUES ('LC00004', 'MRI Scan');
+INSERT INTO LabCode VALUES ('LC00005', 'X-ray');
+INSERT INTO LabCode VALUES ('LC00006', 'Ultrasound');
+INSERT INTO LabCode VALUES ('LC00007', 'ECG');
+INSERT INTO LabCode VALUES ('LC00008', 'Echocardiogram');
+INSERT INTO LabCode VALUES ('LC00009', 'Pap Smear');
+INSERT INTO LabCode VALUES ('LC00010', 'Colonoscopy');
+
+INSERT INTO LabImaging VALUES ('TT28372', '2023-03-20', 'CT scan for Robert Johnson', 'LC00003');
+INSERT INTO LabImaging VALUES ('TTS0105', '2023-04-23', 'Ultrasound for Jessica Garcia', 'LC00006');
+INSERT INTO LabImaging VALUES ('TT65249', '2023-05-10', 'MRI scan for Michael Kim', 'LC00004');
+INSERT INTO LabImaging VALUES ('TT62068', '2023-07-20', 'CT scan for William Davis', 'LC00003');
+INSERT INTO LabImaging VALUES ('TT75042', '2023-08-25', 'Ultrasound for Mary Wilson', 'LC00006');
+INSERT INTO LabImaging VALUES ('TT38754', '2023-09-03', 'MRI scan for Daniel Anderson', 'LC00004');
+
+select * from labcode;
+select * from LabImaging;
