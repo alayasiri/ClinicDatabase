@@ -1,63 +1,34 @@
 use clinic;
 
-select * from appointment;
-
 INSERT INTO Appointment VALUES ('BB097', '2023-02-22', 'Annual physical exam', 1430, 'R01', '45784-SJ', 00005, 100, 200);
-
 INSERT INTO Appointment VALUES ('CA631', '2023-03-15', 'Follow-up appointment for blood work', 1000, 'R02', '32988-LJ', 00009, 101, 201);
-
 INSERT INTO Appointment VALUES ('DE275', '2023-04-01', 'Consultation for knee pain', 1130, 'R03', '12983-GD', 00028, 102, 202);
-
 INSERT INTO Appointment VALUES ('EF698', '2023-05-10', 'Dental cleaning', 1530, 'R02', '01928-CS', 00004, 100, 203);
-
 INSERT INTO Appointment VALUES ('FG132', '2023-06-21', 'Eye exam', 0900, 'R03', '01928-CS', 00013, 101, 204);
-
 INSERT INTO Appointment VALUES ('GH657', '2023-07-14', 'Annual check-up', 1100, 'R01', '32988-LJ', 00006, 102, 202);
-
 INSERT INTO Appointment VALUES ('HI234', '2023-08-02', 'Physical therapy session', 1400, 'R01', '91378-JS', 00009, 100, 200);
-
 INSERT INTO Appointment VALUES ('IJ768', '2023-09-08', 'Flu shot', 1015, 'R03', '32988-LJ', 00001, 101, 201);
-
 INSERT INTO Appointment VALUES ('JK901', '2023-10-19', 'Blood pressure check', 0945, 'R02', '12983-GD', 00003, 102, 202);
-
 INSERT INTO Appointment VALUES ('KL543', '2023-11-12', 'Vaccination', 1600, 'R02', '45784-SJ', 00021, 100, 203);
-
 INSERT INTO Appointment VALUES ('MN097', '2023-12-15', 'Check-up for diabetes', 0900, 'R01', '01928-CS', 00023, 101, 204);
-
 INSERT INTO Appointment VALUES ('AB654', '2024-01-18', 'Follow-up after surgery', 1030, 'R02', '01928-CS', 00027, 102, 202);
-
 INSERT INTO Appointment VALUES ('CD312', '2024-02-19', 'Physical exam for school', 1400, 'R03', '91378-JS', 00005, 100, 200);
-
 INSERT INTO Appointment VALUES ('DE786', '2024-03-10', 'Ear infection', 0930, 'R02', '32988-LJ', 00011, 101, 201);
-
 INSERT INTO Appointment VALUES ('FG431', '2024-04-25', 'Immunization', 1500, 'R01', '18292-WJ', 00019, 102, 202);
-
 INSERT INTO Appointment VALUES ('GH759', '2024-05-08', 'Annual check-up', 1200, 'R03', '18292-WJ', 00020, 100, 203);
-
 INSERT INTO Appointment VALUES ('IJ123', '2024-06-11', 'Flu shot', 1115, 'R02', '32988-LJ', 00016, 101, 204);
-
 INSERT INTO Appointment VALUES ('KL654', '2024-07-06', 'Physical therapy', 1330, 'R02', '45784-SJ', 00007, 102, 200);
-
 INSERT INTO Appointment VALUES ('MN321', '2024-08-29', 'Eye exam', 0900, 'R01', '91378-JS', 00018, 100, 200);
-
 INSERT INTO Appointment VALUES ('AB567', '2024-09-12', 'Consultation for allergies', 0930, 'R10', '45784-SJ', 00017, 101, 201);
-
 INSERT INTO Appointment VALUES ('CD987', '2024-10-18', 'Annual check-up', 1100, 'R03', '01928-CS', 00024, 102, 202);
-
 INSERT INTO Appointment VALUES ('DE123', '2024-11-21', 'Vaccination', 1200, 'R02', '18292-WJ', 00026, 100, 203);
-
 INSERT INTO Appointment VALUES ('FG456', '2024-12-18', 'Blood pressure check', 0945, 'R01', '45784-SJ', 00017, 101, 204);
-
 INSERT INTO Appointment VALUES ('NQ338', '2023-06-20', 'Follow-up after specialist', 1400, 'R02', '01928-CS', 00010, 102, 204);
-
 INSERT INTO Appointment VALUES ('GM183', '2023-06-21', 'Annual physical', 0800, 'R03', '91378-JS', 00001, 100, 200);
-
 INSERT INTO Appointment VALUES ('AS835', '2023-06-22', 'Consultation for surgery', 1500, 'R02', '45784-SJ', 00012, 101, 201);
-
 INSERT INTO Appointment VALUES ('FP574', '2023-06-23', 'Check-up with primary care physician', 0930, 'R01', '45784-SJ', 00025, 102, 202);
-
 INSERT INTO Appointment VALUES ('JS286', '2023-06-24', 'Therapy session', 1100, 'R01', '01928-CS', 00028, 100, 203);
-
 INSERT INTO Appointment VALUES ('KP192', '2023-06-25', 'Lab work', 1300, 'R03', '91378-JS', 00003, 101, 204);
-
 INSERT INTO Appointment VALUES ('VJ321', '2023-06-26', 'Annual physical', 1000, 'R03', '32988-LJ', 00006, 102, 201);
+
+select * from appointment;
