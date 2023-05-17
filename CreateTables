@@ -1,0 +1,175 @@
+use clinic;
+
+#PATIENT
+
+CREATE TABLE Patient(
+	PatientID int NOT NULL,
+	PatientGender varchar(20),
+	LastName varchar(45)NOT NULL,
+	FirstName varchar(45) NOT NULL,
+	MiddleInitial char(1)NOT NULL,
+	Email varchar(255),
+	Phone char(12),
+	DOB DATE,
+	Street varchar(255),
+	City varchar(100),
+	State char(2),
+	Zip int,
+PRIMARY KEY (PatientID)
+);
+
+#DOCTOR
+
+CREATE TABLE Doctor(
+	DoctorID Varchar(30),
+	FirstName varchar(30),
+    MiddleInitial char(1),
+	LastName varchar(30),
+	Email varchar(100),
+	Phone char(12),
+	DOB DATE,
+	PRIMARY KEY (DoctorID)
+);
+
+#RECEPTIONIST
+
+CREATE TABLE Receptionist(
+	ReceptionistID int,
+	FirstName varchar(30),
+	MiddleInitial char(1),
+	LastName varchar(30),
+	DOB DATE,
+	Email varchar(100),
+	Phone char(12),
+	Salary varchar(10),
+PRIMARY KEY (ReceptionistID)
+);
+
+#NURSE
+
+CREATE TABLE Nurse(
+	NurseID int,
+	FirstName varchar(30),
+	MiddleInitial char(1),
+	LastName varchar(30),
+	DOB DATE,
+	Email varchar(100),
+	Phone char(12),
+	Salary varchar(10),
+PRIMARY KEY (NurseID)
+);
+
+#APPT
+
+CREATE TABLE Appointment(
+	ApptID varchar(5) NOT NULL,
+	Date DATE,
+	Description varchar(255),
+	Time int,
+	Room char(3),
+	DoctorID Varchar(30),
+	PatientID int,
+	ReceptionistID int,
+	NurseID int,
+	PRIMARY KEY (ApptID),
+	FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID),
+	FOREIGN KEY (PatientID) REFERENCES Patient(PatientID),
+	FOREIGN KEY (ReceptionistID) REFERENCES Receptionist(ReceptionistID),
+	FOREIGN KEY (NurseID) REFERENCES Nurse(NurseID)
+);
+
+#TREATMENT
+
+CREATE TABLE Treatment (
+    TreatmentID char(7) NOT NULL,
+    Description varchar(255),
+    ApptID varchar(5),
+    PRIMARY KEY (TreatmentID),
+    FOREIGN KEY (ApptID) REFERENCES Appointment(ApptID)
+);
+
+#REFERRAL
+
+CREATE TABLE Referral (
+	ReferralID char(7) PRIMARY KEY REFERENCES Treatment (TreatmentID),
+	LastName varchar(50) NOT NULL,
+   	FirstName varchar(50),
+	MiddleInitial char(1) NOT NULL,
+	Phone char(12)
+);
+
+#PHARMACY
+
+CREATE TABLE Pharmacy (
+	PharmacyID char(7) NOT NULL,
+	Name varchar(20),
+	Phone varchar(12),
+	Street varchar(100),
+	City varchar(30),
+	State char(2),
+	ZipCode char(5),
+	PRIMARY KEY (PharmacyID)
+);
+
+#PRESCRIPTION
+
+CREATE TABLE Prescription (
+	PrescriptionID char(8) PRIMARY KEY REFERENCES Treatment (TreatmentID),
+	Name varchar(30),
+	Dosage varchar(20),
+	DatePrescribed date,
+	PharmacyID char(7) NOT NULL,
+    FOREIGN KEY (PharmacyID) REFERENCES Pharmacy(PharmacyID)
+);
+
+#LAB CODE
+
+CREATE TABLE LabCode (
+	LabCode char(7),
+	Description varchar(255),
+	PRIMARY KEY (LabCode)
+);
+
+#LAB IMAGING
+
+CREATE TABLE LabImaging (
+	LabImageID char(7) PRIMARY KEY REFERENCES Treatment (TreatmentID),
+	LabDate DATE NOT NULL,
+	Description varchar(255),
+	LabCode char(7),
+	FOREIGN KEY (LabCode) REFERENCES LabCode (LabCode)
+);
+
+#OFFICE
+
+CREATE TABLE Office (
+    DoctorID varchar(30) REFERENCES Doctor (DoctorID),	
+    RoomNumber int,
+	PRIMARY KEY (RoomNumber, DoctorID)
+);
+
+#INSURANCE
+
+CREATE TABLE Insurance (
+    PolicyNumber char(4),
+    Name varchar(50),
+    HealthPlan varchar(10),
+    Copay int,
+    CoverageStatus varchar(20),
+    PatientID int,
+    PRIMARY KEY (PolicyNumber),
+    FOREIGN KEY (PatientID) REFERENCES Patient(PatientID)
+);
+
+#BILLING
+
+CREATE TABLE Billing (
+	BillingID char(7),
+	PolicyNumber char(4),
+	PaymentType varchar(30),
+	PaymentStatus varchar(30),
+	BalanceDue DOUBLE,
+	PatientID INT NOT NULL,
+	FOREIGN KEY (PatientID) REFERENCES Patient(PatientID),
+	FOREIGN KEY (PolicyNumber) REFERENCES Insurance(PolicyNumber)
+);
