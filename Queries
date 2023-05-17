@@ -1,0 +1,145 @@
+use clinic;
+
+#List the contact information of patients who have not visited the clinic in the past 30 days 
+#and have an outstanding balance on their account
+
+SELECT Patient.FirstName AS 'First Name', Patient.LastName AS 'Last Name', Patient.Email AS 'Email', 
+	Patient.Phone AS 'Phone', Billing.BalanceDue as 'Outstanding Balance', Appointment.Date as 'Past Appt Date'
+FROM Billing, Patient, Appointment
+WHERE Billing.PatientID = Patient.PatientID AND
+Patient.PatientID = Appointment.PatientID AND 
+Billing.BalanceDue > 0.00 AND
+Appointment.Date < DATE_SUB(CURDATE(), INTERVAL 1 MONTH);
+
+
+#Patient load and revenue generated for each doctor at the clinic if (on avergae) a clinic visit brings in $100 and lab/imaging brings in $400
+
+SELECT Doctor.DoctorID as 'Dr. ID' , Doctor.FirstName as 'Dr. First Name', Doctor.LastName as 'Dr. Last Name', 
+	Count(Patient.PatientID) as 'Patient Load', COUNT(Appointment.ApptID) * 100 AS 'Visit Revenue', 
+    COUNT(LabImaging.LabImageID) * 400 AS 'Lab Revenue'
+FROM Patient
+LEFT JOIN Appointment ON Patient.PatientID = Appointment.PatientID
+LEFT JOIN Doctor ON Appointment.DoctorID = Doctor.DoctorID
+LEFT JOIN Treatment ON Appointment.ApptID = Treatment.ApptID
+LEFT JOIN LabImaging ON Treatment.TreatmentID = LabImaging.LabImageID
+LEFT JOIN Referral ON Treatment.TreatmentID = Referral.ReferralID
+LEFT JOIN Prescription ON Treatment.TreatmentID = Prescription.PrescriptionID
+WHERE Doctor.DoctorID IS NOT NULL
+GROUP BY Doctor.DoctorID;
+
+
+###########################################################################################################################################
+
+#OTHER TEAMMATES' QUERIES
+
+use clinic;
+
+#Lists the patientID, First, Last, and BillingID of all the Patients who have an ‘Active Status’ on 
+#their insurance plans.
+
+SELECT 	Billing.BillingID, 
+Billing.PatientID, 
+Patient.FirstName, 
+Patient.LastName
+FROM Billing
+JOIN Patient ON Patient.PatientID = Billing.PatientID
+WHERE Billing.BillingID IN (
+SELECT Billing.BillingID
+FROM Billing
+JOIN Insurance ON Billing.PolicyNumber = Insurance.PolicyNumber
+WHERE CoverageStatus = 'Active');
+
+
+#Lists the number of Patients that are from each Zipcode, it can help determine if 
+#the clinic should open an office near a Zipcode where many patients are from.
+
+SELECT 	Patient.Zip, 
+COUNT(PatientID) as 'Number of Patients'
+FROM Patient
+GROUP BY Patient.Zip;
+
+
+#Lists the Patient ID, First Name, Middle Initial, and Last Name for all patients who have scheduled 
+#two or more appointments
+
+SELECT 	Patient.PatientID, 
+  	  	COUNT(Patient.PatientID) AS TotalAppointments,
+       	Patient.FirstName, 
+        	Patient.MiddleInitial, 
+        	Patient.LastName
+FROM Patient
+JOIN Appointment ON Patient.PatientID = Appointment.PatientID
+GROUP BY 	Patient.PatientID, 
+            Patient.FirstName, 
+            Patient.MiddleInitial, 
+            Patient.LastName
+HAVING COUNT(Patient.PatientID) >= 2;
+
+
+#Lists the DoctorID, FirstName, LastName, and the total number of appointments taken by each 
+#doctor in descending order
+
+SELECT 	Appointment.DoctorID, 
+Doctor.FirstName, 
+Doctor.LastName, 
+COUNT(Appointment.DoctorID) AS TotalAppointments
+FROM Appointment
+JOIN Doctor ON Doctor.DoctorID = Appointment.DoctorID
+GROUP BY 	Appointment.DoctorID, 
+Doctor.FirstName, 
+Doctor.LastName
+ORDER BY COUNT(Appointment.DoctorID) DESC;
+
+
+#Lists the patient first name, last name, appointment date, and appointment description for 
+#all patients seen by Sophia Chen
+
+SELECT 	Patient.PatientID, 
+Patient.FirstName, 
+Patient.LastName, 
+Appointment.Date, 
+Appointment.Description
+FROM Patient
+JOIN Appointment ON Appointment.PatientID = Patient.PatientID
+JOIN Doctor ON Doctor.DoctorID = Appointment.DoctorID
+WHERE Doctor.FirstName = 'Sophia'  && Doctor.LastName = 'Chen';
+
+
+#Lists the description and number of labs conducted for each code
+
+SELECT 	LabCode.LabCode, 
+LabCode.Description, 
+COUNT(LabImaging.LabCode) as TotalLabsConducted
+FROM LabCode
+JOIN LabImaging ON LabImaging.LabCode = LabCode.LabCode
+GROUP BY LabCode.LabCode, LabCode.Description;
+
+
+#Lists the Patient ID, first name, middle name, and last name for all patients that live in the 
+#zipcode that is 75201 or 75202.
+
+SELECT Patient.PatientID,
+	  Patient.Firstname,
+	  Patient.MiddleInitial,
+	  Patient.LastName,
+	  Patient.Zip
+FROM Patient
+WHERE Patient.Zip IN ('75201' , '75202')
+ORDER BY Patient.Zip;
+
+
+#List the Lab/Imaging ID, Labdate and Description for which an ultrasound will be necessary
+
+SELECT LabImageID,
+	  LabDate,
+	  Description
+FROM LabImaging
+WHERE LabCode IN ('LC00006');
+
+
+#List the treatments, by description, that have been performed multiple times. 
+
+SELECT Treatment.Description, COUNT(*) AS NumPerformances
+FROM Treatment
+GROUP BY Treatment.Description
+HAVING COUNT(*) > 1;
